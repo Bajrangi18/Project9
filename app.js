@@ -1,6 +1,6 @@
 
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js"
- //import { analytics  } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js"
+
    import { auth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js"
    import { firestore } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js"
 let file = 'new.jpg'
@@ -17,7 +17,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-//const analytics = getAnalytics(app);
+
 
 const storage = getStorage();
 const storageRef = ref(storage, 'new.jpg');
