@@ -1,8 +1,4 @@
 
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js"
-
-   import { auth } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js"
-   import { firestore } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js"
 let file = 'new.jpg'
 
 const firebaseConfig = {
