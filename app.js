@@ -1,6 +1,6 @@
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js'
-import { analytics } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js'
-import { getStorage, ref, uploadBytes } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js';
+// import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js'
+// import { analytics } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-analytics.js'
+// import { getStorage, ref, uploadBytes } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js';
 
 let file = 'new.jpg'
 
