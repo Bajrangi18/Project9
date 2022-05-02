@@ -2,18 +2,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HTML 5 Boilerplate</title>
+    <title>C2C</title>
     <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600&amp;family=Ubuntu:wght@500&amp;display=swap" rel="stylesheet">
   </head>
-      <body><nav class="navbar navbar-light bg-light">
-          <div class="container">
-            <a class="navbar-brand" href="#">
-                  <img src="logo.png" alt="" width="30" height="24">
-            </a>
-          </div>
-        </nav>
-        
+      <body>      
         <center>
+                <div class="container-fluid">
+                  <div class="row align-items-start">
+                    <div class="col" id="name">
+                        CAPTURE
+                    </div>
+                    <div class="col" id="logo_cot">
+                      <img src="logo.png" id="logo">
+                    </div>
+                    <div class="col" id="name">
+                      CLOUD
+                    </div>
+                  </div>
+                </div>
+
+            
         <div class="display-cover" id="vidCon">
           <video autoplay=""></video>
         </div>
@@ -23,5 +34,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
   <script src="face-api.min.js"></script>    
   <script type="module" src="app.js"></script>
+
 
 </body></html>
