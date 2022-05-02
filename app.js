@@ -10,20 +10,15 @@ let streamStarted = false;
 const constraints = {
   video: {
     width: {
-       min: 720,
-      ideal: 1080,
-      max: 1440
-//       min: 720,
-//       ideal: 720,
-//       max: 1080,
+ 
+      min: 720,
+      ideal: 720,
+      max: 1080,
     },
     height: {
-       min: 720,
-      ideal: 720,
-      max: 1080
-//       min: 720,
-//       ideal: 1080,
-//       max: 1440
+      min: 720,
+      ideal: 1080,
+      max: 1440
     },
   }
 };
