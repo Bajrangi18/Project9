@@ -13,7 +13,7 @@ body {
 #logo {
     height:10vh;
     width:21vw;
-    animation: pulse 10s ease-in infinite;
+    animation: pulse 12s ease-in infinite;
 }
 #logo_cot{
     animation: mymove 10s ease-in infinite;
