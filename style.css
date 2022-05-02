@@ -2,10 +2,32 @@ video {
     position: absolute;
     width: 90vw;
     height: 70vh;
-    top: 5vh;
+    top: 3vh;
     left: 5vw;
 }
 
 body {
       background-color: #448672
+}
+
+#logo {
+    height:10vh;
+    width:21vw;
+    animation: pulse 10s ease-in infinite;
+}
+#logo_cot{
+    animation: mymove 10s ease-in infinite;
+}
+@keyframes pulse{
+  25%  {transform: scale(0.8);}
+  75%  {transform: scale(1.0);}
+}
+@keyframes mymove {
+  50% {transform: rotate(360deg);}
+}
+#name {
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Ubuntu', sans-serif;
+   font-size: 4vh;
+   color: white;
 }
