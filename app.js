@@ -69,13 +69,13 @@ const database = getDatabase(app);
                  console.log(detectVal);
                  // console.log(detectVal);
           }
-          if(detectVal<0.6){
+          if(detectVal<0.85){
             document.getElementById("verify_emo").style.visibility = "hidden";
             document.getElementById("verify_text").style.top = "65vh";
            document.getElementById("verify_text").style.left = "0vw";
             document.getElementById("verify_text").innerHTML = "Smile for the Camera!";
           }
-          if(detectVal>=0.6){
+          if(detectVal>=0.85){
             document.getElementById("verify_emo").style.visibility="visible";
             document.getElementById("verify_text").style.left = "7vw";
             document.getElementById("verify_text").style.top = "76vh";
