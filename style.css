@@ -36,7 +36,7 @@ body {
   top: 56vh;
   left: 32vw;
   visibility: hidden;
-  transition:visibility 0.3s linear
+  transition:visibility 1s linear
 }
 #smile {
   width: 35vw;
@@ -48,7 +48,7 @@ body {
   color: white;
   position: absolute;
   top: 65vh;
-  left: 13vw;
+  left: 0vw;
   opacity = 1.0;
   transition: opacity 1s ease-in-out;
 }
