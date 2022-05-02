@@ -46,11 +46,11 @@ const database = getDatabase(app);
    if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
      //startStream(constraints);
      Promise.all([
-       faceapi.nets.tinyFaceDetector.loadFromUri("tiny_face_detector_model-weights_manifest.json"),
-       faceapi.nets.faceLandmark68Net.loadFromUri("face_landmark_68_model-weights_manifest.json"),
-       faceapi.nets.faceRecognitionNet.loadFromUri("face_recognition_model-weights_manifest.json"), 
-       faceapi.nets.faceExpressionNet.loadFromUri("face_expression_model-weights_manifest.json"),
-       faceapi.nets.ageGenderNet.loadFromUri("age_gender_model-weights_manifest.json")
+       faceapi.nets.tinyFaceDetector.loadFromUri("/Project9/tiny_face_detector_model-weights_manifest.json"),
+       faceapi.nets.faceLandmark68Net.loadFromUri("/Project9/face_landmark_68_model-weights_manifest.json"),
+       faceapi.nets.faceRecognitionNet.loadFromUri("/Project9/face_recognition_model-weights_manifest.json"), 
+       faceapi.nets.faceExpressionNet.loadFromUri("/Project9/face_expression_model-weights_manifest.json"),
+       faceapi.nets.ageGenderNet.loadFromUri("/Project9/age_gender_model-weights_manifest.json")
       ]).then(startStream(constraints));
    }
  });
