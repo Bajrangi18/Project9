@@ -17,7 +17,7 @@ const constraints = {
     height: {
       min: 1080,
       ideal: 1920,
-      max: 1440
+      max: 1920
     },
   }
 };
