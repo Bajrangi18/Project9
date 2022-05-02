@@ -78,7 +78,7 @@ const database = getDatabase(app);
           if(detectVal>=0.6){
             document.getElementById("verify_emo").style.visibility="visible";
             document.getElementById("verify_text").style.left = "4vw";
-            document.getElementById("verify_text").style.top = "70vh";
+            document.getElementById("verify_text").style.top = "80vh";
             document.getElementById("verify_text").innerHTML = "Face Detected!";
             myScreen();
           }
@@ -116,9 +116,4 @@ function myScreen(){
    video.srcObject = stream;
  };
 
-//extra
-// writeUserData("123","Here");
 
-// uploadBytes(storageRef, canvas).then((snapshot) => {
-//   console.log(img.src);
-// });
