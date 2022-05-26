@@ -1,2 +1,4 @@
 # Project9
-Face ID
+Face ID Web App
+
+NOTE: FOR BEST USE OF WEB APP USE A SMARTPHONE
