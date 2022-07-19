@@ -1,16 +1,16 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js'
 // import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js"
-import { getDatabase, ref, set  } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+import { getDatabase, ref, set, onValue  } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
 var detectVal = 0;
 var timeDelay = 1000;
 const video = document.querySelector('video');
 let canvas = document.createElement('canvas');
 let streamStarted = false;
-
+let flagLoad = true;
 const constraints = {
   video: {
     width: {
- 
+
       min: 720,
       ideal: 720,
       max: 1080,
@@ -47,11 +47,11 @@ const database = getDatabase(app);
    if ('mediaDevices' in navigator && navigator.mediaDevices.getUserMedia) {
      //startStream(constraints);
      Promise.all([
-          faceapi.nets.tinyFaceDetector.loadFromUri("/Project9/tiny_face_detector_model-weights_manifest.json"),
-          faceapi.nets.faceLandmark68Net.loadFromUri("/Project9/face_landmark_68_model-weights_manifest.json"),
-          faceapi.nets.faceRecognitionNet.loadFromUri("/Project9/face_recognition_model-weights_manifest.json"),
-          faceapi.nets.faceExpressionNet.loadFromUri("/Project9/face_expression_model-weights_manifest.json"),
-          faceapi.nets.ageGenderNet.loadFromUri("/Project9/age_gender_model-weights_manifest.json")
+          faceapi.nets.tinyFaceDetector.loadFromUri("tiny_face_detector_model-weights_manifest.json"),
+          faceapi.nets.faceLandmark68Net.loadFromUri("face_landmark_68_model-weights_manifest.json"),
+          faceapi.nets.faceRecognitionNet.loadFromUri("face_recognition_model-weights_manifest.json"),
+          faceapi.nets.faceExpressionNet.loadFromUri("face_expression_model-weights_manifest.json"),
+          faceapi.nets.ageGenderNet.loadFromUri("age_gender_model-weights_manifest.json")
       ]).then(startStream(constraints));
    }
  });
@@ -69,13 +69,13 @@ const database = getDatabase(app);
                  console.log(detectVal);
                  // console.log(detectVal);
           }
-          if(detectVal<0.85){
+          if(detectVal<0.6){
             document.getElementById("verify_emo").style.visibility = "hidden";
             document.getElementById("verify_text").style.top = "65vh";
            document.getElementById("verify_text").style.left = "0vw";
             document.getElementById("verify_text").innerHTML = "Smile for the Camera!";
           }
-          if(detectVal>=0.85){
+          if(detectVal>=0.6){
             document.getElementById("verify_emo").style.visibility="visible";
             document.getElementById("verify_text").style.left = "7vw";
             document.getElementById("verify_text").style.top = "76vh";
@@ -117,3 +117,21 @@ function myScreen(){
  };
 
 
+
+ const db = getDatabase();
+ const usn = ref(db, 'details/'+'recog_id/');
+ onValue(usn, (snapshot) => {
+      console.log(snapshot.val());
+      if(flagLoad==true){
+        showToast(snapshot.val());
+      }
+      flagLoad = true;
+ });
+
+
+ function showToast(usnTaken) {
+   var x = document.getElementById("snackbar");
+   x.className = "show";
+   document.getElementById("snackbar").innerHTML = usnTaken + "<br>" + "Verified!";
+   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+ }
