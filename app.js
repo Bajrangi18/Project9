@@ -13,7 +13,7 @@ const constraints = {
 
       min: 720,
       ideal: 720,
-      max: 1080,
+      max: 1081,
     },
     height: {
       min: 720,
